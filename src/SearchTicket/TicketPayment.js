@@ -57,7 +57,6 @@ function TicketPayment(){
                 {/* <UserFormReview/>
                 <Seatreservation/> */}
                 <PaymentMode/>
-                
             </div>
            
             <div className="card mt-2 w-100 ticket-bill" style={{marginRight:"4rem",borderRadius:"1.2rem"}}>

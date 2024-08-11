@@ -6,10 +6,21 @@ import { IoIosArrowForward } from "react-icons/io";
 // import { Form } from "react-router-dom";
 import UserForm from "./FormTicket";
 import Footer from "../Component/Footer";
+import { useNavigate } from "react-router-dom";
 
 function TicketShow(){
+    const navigate = useNavigate();
     let review = ["Traveler Details","Seat Reservation","Review","Payment"]
-     return(
+      const handleTravler=(index)=>{
+        if(index === 1){
+           navigate('../ticketreservation');
+        }else if(index === 2){
+             navigate('../ticketreview');
+        }else if(index === 3){
+             navigate('../payment');
+        }
+      }
+    return(
         <>
         <div>
             <HandleNavbar/>
@@ -44,9 +55,11 @@ function TicketShow(){
                         </div>
                     </div>
                 </div>
-                <div className="card-review d-flex mt-2 fw-bold" style={{justifyContent:"space-around"}}>
+                <div className="card-review d-flex mt-2 fw-bold" style={{justifyContent:"space-around",cursor:"pointer"}} onClick={handleTravler}>
                 {review.map((r,index)=>(
-                    <div key={index} className={index === 0 ? "text-primary":""}>
+                    <div key={index} className={index === 0 ? "text-primary":""}
+                     onClick={()=> handleTravler(index)}
+                    >
                      <p>{r} &nbsp;<IoIosArrowForward /></p>
                      </div>
                 ))}

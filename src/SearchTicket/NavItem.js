@@ -1,12 +1,17 @@
 import React from "react";
 import './NavItem.css';
 import { BsAirplaneFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 function HandleNavbar(){
+     const navigate = useNavigate();
+
+      const handleChange =()=>{
+           navigate('/');
+      }
      return(
         <nav className="navbar">
-             
-        <div className='demonav'>
+         <div className='demonav' onClick={handleChange} style={{cursor:"pointer"}}>
         <BsAirplaneFill className="text-primary" style={{marginTop:"8px",fontSize:"25px"}}/>
         <h3 className="text-primary" style={{}}>Flywere</h3>
         </div>

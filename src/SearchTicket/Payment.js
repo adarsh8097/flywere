@@ -2,7 +2,14 @@ import React from "react";
 import './Payment.css';
 import { FaCcMastercard } from "react-icons/fa6";
 import { FaRegCreditCard } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 function PaymentMode() {
+     const navigate = useNavigate();
+
+      const handleNavigate =()=>{
+         navigate('../finalticket');
+      }
+     
     return (
         <>
         <div className="payment-form">
@@ -33,13 +40,11 @@ function PaymentMode() {
                     <label htmlFor="nameOnCard">Name on Card</label>
                     <input type="text" id="nameOnCard" name="nameOnCard" placeholder="John Doe" required />
                 </div>
-                    </div>
-
-                
-        </form>
+             </div>
+         </form>
         <div>
                 <button className="border border-info text-info mt-2 p-2" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}}>Previous</button>
-                <button className="btn btn-primary" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}}>Next</button>
+                <button className="btn btn-primary" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}} onClick={handleNavigate}>Next</button>
             </div>
         </div>
         </>

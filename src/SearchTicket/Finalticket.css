@@ -1,46 +1,57 @@
-.ticketdatafinal-show {
-    background-color: #f9f9f9;
-    padding-bottom: 20px;
-}
-
 .ticket-final {
-    margin-top: 3rem;
-}
-
-.card {
-    border-radius: 1.2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
-    padding: 10px 15px;
-}
-
-.card-body {
-    padding: 15px;
-}
-
-.ticket-modal {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    background-color: #ccc;
+    border-radius: 1.2rem;
+    /* width: 600px; */
 }
 
-.border {
-    padding: 10px;
+.ticketdatafinal-show {
+    background-image: url('https://e0.pxfuel.com/wallpapers/894/170/desktop-wallpaper-blue-sky-background-of-your-choice-hi-res-sky-thumbnail.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.text-info {
-    color: #17a2b8 !important;
+/* .ticket-shap {
+    width: 100vw;
+    margin-right: 30rem;
+} */
+
+.ticket-modal {
+    position: relative;
 }
 
-.text-primary {
-    color: #007bff !important;
+.adarsh {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    margin-left: 35rem;
+    border-radius: 50%;
+    margin-top: -50px;
+    z-index: 1;
 }
 
-.text-secondary {
-    color: #6c757d !important;
+.sandeep {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color:white;
+    /* border: 1px solid black; */
+    bottom: 0;
+    margin-left: 35rem;
+    border-radius: 50%;
+    margin-bottom: -60px;
+    z-index: 1;
+}
+
+.dotted-line {
+    position: absolute;
+    width: 2px;
+    height: calc(80% + 100px); /* Adjust height to cover the space between the circles */
+    background: linear-gradient(180deg, white 50%, transparent 50%);
+    background-size: 4px 8px;
+    left: calc(35rem + 50px); /* Align with the center of the circles */
+    top: 0;
+    z-index: 0; /* Ensure the line is behind the circles */
 }
