@@ -1,0 +1,37 @@
+.search-ticket{
+    width: 350px;
+    background-color: white;
+    margin-top: 2rem;
+    border-radius: 0.8rem;
+    
+}
+
+.count-day{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     gap: 10px;
+}
+
+.democard:hover{
+     border: 1px solid rgb(116, 116, 201);
+     cursor: pointer;
+}
+.card-fist{
+    font-weight: 800;
+}
+
+.count-price{
+     display: flex;
+     justify-content: space-evenly;
+    
+}
+
+.card-contetn{
+    width: 200px;
+}
+
+.ticket-coolecter{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}

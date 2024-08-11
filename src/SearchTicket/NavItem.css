@@ -1,0 +1,9 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+     
+     background-color: white;
+     /* border-bottom: 1px solid gray; */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}

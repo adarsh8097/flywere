@@ -1,0 +1,99 @@
+
+.card-ticket{
+     background-image: url('https://img.freepik.com/premium-photo/happy-young-asian-tourist-woman-holding-passport-boarding-pass-with-baggage-going-travel-holidays-blue-background_74952-981.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     display: flex;
+     text-overflow: ellipsis;
+     justify-content: space-between;
+     width: 600px;
+     height: 30vh;
+     border-top-right-radius: 2rem;
+     border-bottom-right-radius: 2rem;
+    /* opacity: 0.8; */
+    border-top-left-radius: 1rem;
+     border-bottom-left-radius: 1rem;
+     
+}
+.ticket-text{
+     width: 200px;
+     margin-top: 4rem;
+     margin-right: 2rem;
+     color: white;
+     font-weight: 600;
+     /* opacity: 0.7; */
+}
+
+.ticket-heading {
+    width: 200px;
+    margin-left: 1rem;
+    margin-top:1rem;
+    color: white;
+    font-weight: 700;
+
+}
+.ticket-feture{
+     background-image: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-54338.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     /* width: 200px; */
+     /* text-align: center; */
+     border-top-Left-radius: 2rem;
+     border-bottom-Left-radius: 2rem;
+     font-weight: 700;
+     color: white;
+     text-overflow: ellipsis;
+     width: 300px;
+     /* border-left-style: dashed; */
+     /* opacity: 0.6; */
+     border-top-right-radius: 1rem;
+     border-bottom-right-radius: 1rem;
+   
+}   
+
+
+.ticket-item{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     margin-left: 3rem;
+     margin-bottom: -50px;
+     z-index: 20;
+     position: absolute;
+     /* background-color: white; */
+
+}
+.desto{
+      background-repeat: no-repeat;
+      opacity: 0.8;
+      background-size: cover;
+      /* background-image: url('https://img.freepik.com/free-photo/sky-clouds_1127-3770.jpg'); */
+}
+.query{
+   
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     margin-top: 2rem;
+
+}
+
+.card-description{
+     position: relative;
+     background-image: url('https://media.licdn.com/dms/image/C4D1BAQEJvneNB605Ww/company-background_10000/0/1652340027303/flydubai_cover?e=2147483647&v=beta&t=r8NHs1N958V4hlYj3A2H-fiVsGbpgxV7Q1P1AU9aalo');
+     background-size: cover;
+     background-repeat: no-repeat;
+     height: 80vh;
+     margin-top: 5rem;
+     /* border-bottom-left-radius: 2rem;
+     border-bottom-right-radius: 2rem; */
+    
+}
+
+.card-flite{
+      width: 300px;
+      margin-left: 10rem;
+      margin-top: 9rem;
+      color: white;
+      font-weight: 700;
+}
+

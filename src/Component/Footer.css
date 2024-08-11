@@ -1,0 +1,26 @@
+
+.footer {
+    margin-top: 2rem;
+    background-color: #fdfcfc; /* Dark background color */
+    color: rgb(163, 161, 161); /* White text color */
+    padding: 20px 10px; /* Padding top and bottom */
+    /* text-align: center; Centered text */
+  }
+ 
+
+  .footer-content li {
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: color 0.3s ease;
+    font-size: 17px; /* Smooth transition for color change */
+  }
+
+  .footer-content li:hover {
+    color: #007bff; /* Primary blue color on hover */
+  }
+
+  .footer-text{
+     margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+
+  }

@@ -1,0 +1,15 @@
+.ticket-modal{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    
+}
+.ticket-shap{
+     border-radius: 1.5rem;
+     width: 65vw;
+    
+}
+
+.ticket-bill{
+     height: 50vh;
+}

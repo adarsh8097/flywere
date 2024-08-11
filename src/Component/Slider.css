@@ -1,0 +1,107 @@
+.carddetails{
+    display: flex;
+    flex-direction: row;
+    gap: 5px; 
+    margin-top: 2rem;
+     margin-left: 50px;
+     width: 1000px;
+    
+}
+
+.cardSlidertitle {
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
+    display: flex;
+    flex: 1;
+    border: 1px solid #ccc; /* Optional: adds a border around each card */
+    border-radius: 8px; /* Optional: rounds the corners of each card */
+    overflow: hidden;
+    background-image: url('https://t3.ftcdn.net/jpg/04/96/62/54/360_F_496625426_vV6Kii3Yv0rJ9JFSnyXjhV7bUepOzEQ5.jpg'); /* Aligns text to the left */
+    border-radius: 1.2rem;
+    height: 200px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     /* Ensures the content doesn't overflow the card */
+     /* Background color for the card */
+}
+
+.card-image {
+    flex: 1;
+    background-size: cover; /* Ensures the image covers the entire left section */
+    background-position: center; /* Centers the image */
+    min-height: 150px;
+    /* height: 150px; */
+    width: 15vw;
+    /* border-top-left-radius:  50px;  */
+     /* border-top-right-radius:  50px; */
+    border-bottom-right-radius: 50px;
+}
+
+.card-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     text-overflow: ellipsis;
+      width: 150px;
+    color: white; /* Text color */
+    text-align: left;
+    
+   }
+
+.card-text p, .card-text span, .card-text h3 {
+    margin: 5px 0; /* Adds space between text elements */
+}
+
+.card-text h3 {
+    font-size: 2rem; /* Adjusts the size of the discount text */
+    color: #f1efef; /* Highlighted color for the discount */
+}
+
+.card-date{
+    background-color: white;
+    border-radius: 1.5rem;
+    text-align: left;
+    padding: 5px;
+    margin-right: 10px;
+    width: 95px;
+    font-weight: 700;
+    color: rgb(41, 112, 170);
+    /* margin-top: 10px; */
+}
+
+.card-off{
+     background-color: orange;
+     border-radius: 20%;
+     /* padding: 2px; */
+     width: 45px;
+     height: 25px;
+     text-align: center;
+}
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 135%; /* Center vertically */
+    transform: translateY(-180%);
+    font-size: 1.3rem; /* Adjust size of the arrow */
+    color: rgb(104, 94, 196);
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgb(250, 246, 246); /* Semi-transparent background */
+    padding: 3px;
+    margin-top: 0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    
+}
+
+.arrow-left {
+    
+    left: 155px; /* Position arrow on the left */
+}
+
+.arrow-right {
+    right: 170px; /* Position arrow on the right */
+}
