@@ -13,6 +13,7 @@ nav{
 
 .nav-bar {
     background-image: url('https://cdn.uc.assets.prezly.com/46d27061-c672-42dc-a180-8423d8495514/-/crop/9000x3230/0,665/-/preview/-/preview/2048x2048/-/quality/best/-/format/auto/');
+    
     background-repeat: no-repeat;
     background-size: cover; /* Ensure the image covers the entire container */
     background-position: center; /* Center the image */
