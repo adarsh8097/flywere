@@ -22,12 +22,12 @@ function UserFormReview() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Form Data Submitted: ", formData);
-        // Here you can handle form submission, e.g., send data to a server
+       
     };
 
     return (
         <div className="form-container">
-            {/* <h2>User Information Form</h2> */}
+          
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="title"> Select Title:</label>
@@ -89,8 +89,7 @@ function UserFormReview() {
                 </div>
                 </div>
 
-                {/* <button type="submit" className="submit-button" style={{borderRadius:"2rem",width:"150px"}}>Next</button> */}
-            </form>
+                   </form>
         </div>
 
     );

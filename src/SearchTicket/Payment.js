@@ -1,7 +1,5 @@
 import React from "react";
 import './Payment.css';
-import { FaCcMastercard } from "react-icons/fa6";
-import { FaRegCreditCard } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 function PaymentMode() {
      const navigate = useNavigate();
@@ -9,11 +7,14 @@ function PaymentMode() {
       const handleNavigate =()=>{
          navigate('../finalticket');
       }
+      const handlePrivious =()=>{
+        navigate('../ticket');
+     }
      
     return (
         <>
         <div className="payment-form">
-            {/* <h2>Payment Information</h2> */}
+           
             <form>
                 <div className="d-flex" style={{gap:"10px"}}>
                 <div className="form-group">
@@ -43,7 +44,7 @@ function PaymentMode() {
              </div>
          </form>
         <div>
-                <button className="border border-info text-info mt-2 p-2" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}}>Previous</button>
+                <button className="border border-info text-info mt-2 p-2" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}} onClick={handlePrivious}>Previous</button>
                 <button className="btn btn-primary" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}} onClick={handleNavigate}>Next</button>
             </div>
         </div>

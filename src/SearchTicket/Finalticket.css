@@ -1,9 +1,12 @@
 .ticket-final {
     display: flex;
     justify-content: space-between;
-    background-color: #ccc;
+    /* background-color: #fcf8f8; */
+    background-image: url('https://media.istockphoto.com/id/489838744/photo/sunset-over-indian-ocean.jpg?s=1024x1024&w=is&k=20&c=k6I6Nm-7ZXjVLnt0FsLKL1xWQfaaqkk-sOnwKRsoIyU=');
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 1.2rem;
-    /* width: 600px; */
+  
 }
 
 .ticketdatafinal-show {
@@ -12,10 +15,7 @@
     background-size: cover;
 }
 
-/* .ticket-shap {
-    width: 100vw;
-    margin-right: 30rem;
-} */
+
 
 .ticket-modal {
     position: relative;
@@ -48,10 +48,10 @@
 .dotted-line {
     position: absolute;
     width: 2px;
-    height: calc(80% + 100px); /* Adjust height to cover the space between the circles */
-    background: linear-gradient(180deg, white 50%, transparent 50%);
+    height: calc(80% + 100px); 
+    background: linear-gradient(180deg, black 50%, transparent 50%);
     background-size: 4px 8px;
-    left: calc(35rem + 50px); /* Align with the center of the circles */
+    left: calc(35rem + 50px); 
     top: 0;
-    z-index: 0; /* Ensure the line is behind the circles */
+    z-index: 0; 
 }

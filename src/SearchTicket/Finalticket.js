@@ -3,7 +3,9 @@ import './Finalticket.css';
 import HandleNavbar from "./NavItem";
 import Footer from "../Component/Footer";
 
+
 function Finalticket() {
+    
     return (
         <div className="">
             <HandleNavbar />
@@ -80,7 +82,7 @@ function Finalticket() {
                         </div>
                         <div className="container">
                     <div className="d-flex"style={{justifyContent:"center"}}>
-                    <button className="border border-info text-info mt-2 p-2 w-25" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}}>Download</button>
+                    <button className="border border-info text-info mt-2 p-2 w-25" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}} >Download</button>
                 <button className="btn btn-primary w-25 mt-2" style={{borderRadius:"2rem",marginLeft:"12rem",width:"150px"}}>Share</button>
            
                     </div>

@@ -1,7 +1,18 @@
 import React from "react";
 import './Seatreservation.css';
+import { useNavigate } from "react-router-dom";
+
 
 function Seatreservation() {
+    const navigate  = useNavigate();
+
+    let handlebutton =()=>{
+         navigate('../ticket');
+    }
+    
+    let handleNext =()=>{
+        navigate('../ticketreview');
+    }
     const rows = ['A', 'B', 'C', 'D'];
     const seats = [];
 
@@ -13,7 +24,7 @@ function Seatreservation() {
 
     return (
         <div>
-            {/* <h2>Seat Reservation</h2> */}
+           
             <div className="seat-grid mt-2">
                 {seats.map((seat,index) => (
                     <div key={seat.id} 
@@ -24,8 +35,8 @@ function Seatreservation() {
                 ))}
             </div>
             <div>
-                <button className="border border-info text-info mt-2 p-2" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}}>Previous</button>
-                <button className="btn btn-primary" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}}>Next</button>
+                <button className="border border-info text-info mt-2 p-2" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}} onClick={handlebutton}>Previous</button>
+                <button className="btn btn-primary" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}} onClick={handleNext}>Next</button>
             </div>
         </div>
     );

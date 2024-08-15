@@ -1,17 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import Hader from './Page/Hader';
-
-
-import {Routes,Route,Router} from 'react-router-dom';
+import {Routes,Route} from 'react-router-dom';
 import HomePage from './HomePage';
 import SearchTicket from './SearchTicket/SearchTicket';
-import Ticket from './Component/Ticket';
 import TicketShow from './SearchTicket/TicketShow';
 import HandleNavbar from './SearchTicket/NavItem';
 import TicketReservation from './SearchTicket/TicketReservation';
 import TicketReview from './SearchTicket/Ticketreview';
-import PaymentMode from './SearchTicket/Payment';
 import TicketPayment from './SearchTicket/TicketPayment';
 import Finalticket from './SearchTicket/Finalticket';
 function App() {
