@@ -18,3 +18,11 @@
 .seat:hover {
     background-color: #ccc;
 }
+
+@media screen and (max-width:540px) {
+   .seat-grid {
+     display: grid;
+     grid-template-columns: repeat(5,1fr);
+   }
+  
+}

@@ -96,4 +96,61 @@
       color: white;
       font-weight: 700;
 }
+@media screen and (max-width:1024px){
+     .ticket-feture{
+          display: none;
+     }
+     .card-ticket{
+          width: 150%;
+          margin: 0;
+          bottom: 0;
+          height: 18vh;
+     }
+     .card-description{
+          height: 40vh;
+    }
+}
+
+@media screen and (max-width:768px){
+     .ticket-feture{
+           display: none;
+     }
+     .card-ticket{
+           width: 150%;
+           margin: 0;
+           bottom: 0;
+           height: 20vh;
+     }
+     .card-description{
+           height: 40vh;
+     }
+     .card-flite{
+          margin-left: 4rem;
+          
+     }
+}
+
+@media screen and (max-width:540px) {
+     .ticket-item{
+          display: none;
+     }
+
+     .card-flite{
+          margin-left: 10px;
+     }
+     .crd-headeing{
+           text-align:left;
+           margin-left: 5px;
+     }
+
+     .query{
+          display: flex;
+          flex-direction: column;
+     }
+   .card-description{
+          height: 50vh;
+    }
+     
+
+}
 

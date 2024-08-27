@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './ticketShow.css';
 import HandleNavbar from "./NavItem";
 // import Ticket from "../Component/Ticket";
@@ -8,9 +8,14 @@ import UserForm from "./FormTicket";
 import Footer from "../Component/Footer";
 import Seatreservation from "./SeatReservation";
 import UserFormReview from "./FormReview";
+import { useNavigate } from "react-router-dom";
 
 function TicketReview(){
-    let review = ["Traveler Details","Seat Reservation","Review","Payment"]
+    const navigate = useNavigate();
+   let review = ["Traveler Details","Seat Reservation","Review","Payment"]
+   const handleNext = () => {
+    navigate('../payment');
+}
      return(
         <>
         <div>
@@ -54,7 +59,14 @@ function TicketReview(){
                 ))}
                 </div>
                 <UserFormReview/>
-                <Seatreservation/>
+                <button 
+                    className="btn btn-primary" 
+                    style={{ borderRadius: "2rem", marginRight: "2rem", width: "150px" }} 
+                    onClick={handleNext}
+                >
+                    Next
+                </button>
+                {/* <Seatreservation/> */}
             </div>
            
             <div className="card mt-2 w-100 ticket-bill" style={{marginRight:"4rem",borderRadius:"1.2rem"}}>

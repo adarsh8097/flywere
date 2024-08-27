@@ -37,7 +37,7 @@ const Footer = () => {
                         <li>{d}</li>
                       ))}
                     </div>
-                    <div>
+                    <div  className='social-demo'>
                     <li style={{display:"flex",flexDirection:'column',fontSize:"18px",color:'#000000'}}>Social</li>
                       {Social.map((d)=>(
                         <li>{d}</li>

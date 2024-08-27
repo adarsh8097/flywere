@@ -55,3 +55,31 @@
     top: 0;
     z-index: 0; 
 }
+
+@media screen and (max-width:540px) {
+    .finalticketemo{
+         display: none;
+    }
+    .dotted-line{
+         display: none;
+    }
+    .adarsh,.sandeep{
+         display: none;
+    }
+    .finalticketemo{
+
+    }
+}
+@media screen and (max-width:912px) {
+    .ticket-final{
+         display: flex;
+         flex-direction: column;
+    }
+    .adarsh,.sandeep,.dotted-line{
+       display: none;
+   }
+
+    /* .finalticketemo{
+        display: none;
+   } */
+}

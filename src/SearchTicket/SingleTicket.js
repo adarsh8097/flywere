@@ -1,31 +1,20 @@
 import React from "react";
-import './ticketShow.css';
-import HandleNavbar from "./NavItem";
-// import Ticket from "../Component/Ticket";
-import { IoIosArrowForward } from "react-icons/io";
-// import { Form } from "react-router-dom";
-import UserForm from "./FormTicket";
-import Footer from "../Component/Footer";
-// import { useNavigate } from "react-router-dom";
-// import { SingleCard } from "./SingleTicket";
 import { useParams } from "react-router-dom";
 import { ticket } from "../Page/Airpots";
-function TicketShow(){
-   
-    let {id} = useParams();
-    console.log(id);
-    const selectedTicket = ticket.find((t) => t.id === parseInt(id, 10));
-    console.log(selectedTicket);
-    let review = ["Traveler Details","Seat Reservation","Review","Payment"]
-  
-    
-    return(
-        <>
+ 
+ export let SingleCard =()=>{
+
+     let {id} = useParams();
+     console.log(id);
+     const selectedTicket = ticket.find((t) => t.id === parseInt(id, 10));
+     console.log(selectedTicket);
+     
+
+     
+     return(
         <div>
-            <HandleNavbar/>
-           <div className=" d-flex" style={{justifyContent:"space-evenly"}}>
-           <div className="container">
-           <div className="container">
+             {/* <h2>This is new Item{id}</h2> */}
+             <div className="container">
              <div className="card ticket-shap mt-3">
                     <div className="card-header d-flex" key={selectedTicket.id}>
                         <div className="card-db">
@@ -56,49 +45,17 @@ function TicketShow(){
                         </div>
                     </div>
                 </div>
-               
-            </div>
-                <div className="card-review d-flex mt-2 fw-bold" style={{justifyContent:"space-around",cursor:"pointer"}}>
+                {/* <div className="card-review d-flex mt-2 fw-bold" style={{justifyContent:"space-around",cursor:"pointer"}} onClick={handleTravler}>
                 {review.map((r,index)=>(
                     <div key={index} className={index === 0 ? "text-primary":""}
-                  
+                     onClick={()=> handleTravler(index)}
                     >
                      <p>{r} &nbsp;<IoIosArrowForward /></p>
                      </div>
                 ))}
                 </div>
-                <UserForm/>
-            </div>
-           
-            <div className="card mt-2 w-100 ticket-bill" style={{marginRight:"4rem",borderRadius:"1.2rem"}}>
-                <h4 className="card-header">Fare Summary</h4>
-                <div className="d-flex" style={{justifyContent:'space-around'}}>
-                <div className="text text-secondary">
-                <p>Food Snack, and Drink 3X</p>
-                <p>Ticket</p>
-                <p>Discount </p>
-                </div>
-                <div className="text text-secondary">
-                    <p>$60</p>
-                    <p>$160</p>
-                    <p>-</p>
-                </div>
-                </div>
-                <div>
-                    <button className="btn border border-info text-info w-100 fw-bold " style={{borderRadius:"2rem"}}>Select Discount</button>
-                    </div>
-                    <div className="card-footer d-flex mt-3" style={{justifyContent:"space-between"}}>
-                        <p>Total Summary</p>
-                        <h5>$241</h5>
-                    </div>
+                <UserForm/> */}
             </div>
             </div>
-      
-        </div>
-        <Footer/>
-            
-            </>
      );
-}
-
-export default TicketShow;
+ }

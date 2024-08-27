@@ -4,6 +4,7 @@ import { GiTicket } from "react-icons/gi";
 import { BiSolidOffer } from "react-icons/bi";
 import { MdOutlineElectricBolt } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 function Ticket(){
     let navigate = useNavigate();
     let question =[
@@ -42,6 +43,11 @@ function Ticket(){
      function HandleNavbar(){
        navigate('../ticketreservation')
      }
+     
+     function handleContectUS(){
+       toast.info("coming soon!");
+
+     }
    
      return(
        <>
@@ -61,7 +67,7 @@ function Ticket(){
                 </div>
                  </div>
            <div className="card-description">
-         <h3 className="text-white" style={{marginLeft:"12rem"}}>Partner Airlines</h3>
+         <h3 className="text-white crd-headeing" style={{marginLeft:"12rem"}}>Partner Airlines</h3>
          <p className="card-flite">
             <strong style={{fontSize:"1.5rem"}}>Partner Airlines</strong><br></br>
            Thorough your extensive collabration with more then 200 leading Airlines world wide connecting you to any distination you want between connecting countries and city.
@@ -85,7 +91,7 @@ function Ticket(){
          <div >
             <p style={{textAlign:"center",marginTop:"1.2rem",color:"black",fontWeight:"bold",fontSize:"1.2rem"}}>Need more question ? </p>
              <div className="d-flex" style={{flexDirection:"column",justifyContent:"center",alignItems:'center'}}>
-             <button className="btn btn-primary" style={{borderRadius:'1.5rem',width:"140px",fontWeight:"bold"}}>Contect Us</button>
+             <button className="btn btn-primary" style={{borderRadius:'1.5rem',width:"140px",fontWeight:"bold"}} onClick={handleContectUS}>Contect Us</button>
              </div>
          </div>
          </div>

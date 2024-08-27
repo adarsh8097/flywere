@@ -2,9 +2,15 @@ import React from "react";
 import './Finalticket.css';
 import HandleNavbar from "./NavItem";
 import Footer from "../Component/Footer";
-
+import { toast } from "react-toastify";
 
 function Finalticket() {
+    const userformdata = JSON.parse(sessionStorage.getItem('userFormData')) || {};
+    console.log(userformdata);
+
+   let handleContectUS =()=>{
+     toast.info("coming soon !");
+   }
     
     return (
         <div className="">
@@ -12,7 +18,7 @@ function Finalticket() {
             <div>
                 <h4 style={{textAlign:"center",marginTop:"2rem"}}>Your E-Ticket is Ready!</h4>
                 <div className="container">
-                    <div className="card ticket-shap mt-3 w-100 ">
+                    <div className="card ticket-shap mt-3 w-100 p-2">
                         <div className=" d-flex">
                             <div className="card-db">
                                 <img src="https://assets.planespotters.net/files/airlines/4/airasia-india_8e98a7_opk.png" alt="img-airspace" width="100px" />
@@ -22,7 +28,7 @@ function Finalticket() {
                                 <p className="fs-6 mt-1 text-info border border-info p-2" style={{ borderRadius: "0.5rem" }}>Economy class</p>
                             </div>
                         </div>
-                        <div className="ticket-final">
+                        <div className="ticket-final p-2">
                             <div className="ticket-modal">
                                 <div className="adarsh"></div>
                                 <div className="dotted-line"></div>
@@ -48,21 +54,21 @@ function Finalticket() {
                             </div>
 
                             <div className="container">
-                                <div className=" w-100">
+                                <div className="w-100 finalticketemo">
                                     <div className="d-flex">
                                         <div className="card-body" style={{ justifyContent: "space-between" }}>
                                             <p className="text-secondary fw-bold">Name</p>
-                                            <h6>Muhamad Maljupri</h6>
+                                            <h6>{ userformdata.firstName ? userformdata.firstName:"Muhamad Maljupri"}</h6>
                                         </div>
                                         <div className="card-body">
                                             <p className="text-secondary fw-bold">Email</p>
-                                            <h6>muljupri123@gmail.com</h6>
+                                            <h6>{ userformdata.lastName ? userformdata.lastName:"muljupri123@gmail.com"} </h6>
                                         </div>
                                     </div>
                                     <div className="d-flex">
                                     <div className="card-body">
                                         <p className="text-secondary fw-bold">Passport Number</p>
-                                        <h6>231454422</h6>
+                                        <h6>{ userformdata.passportNumber ? userformdata.passportNumber:" 231454422"}</h6>
                                         <div className="border text-center fw-bold bg-light mt-2" style={{borderRadius:"0.8rem"}}>
                                             <p>Gate</p>
                                             <h4>24</h4>
@@ -82,8 +88,8 @@ function Finalticket() {
                         </div>
                         <div className="container">
                     <div className="d-flex"style={{justifyContent:"center"}}>
-                    <button className="border border-info text-info mt-2 p-2 w-25" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}} >Download</button>
-                <button className="btn btn-primary w-25 mt-2" style={{borderRadius:"2rem",marginLeft:"12rem",width:"150px"}}>Share</button>
+                    <button className="border border-info text-info mt-2 p-2 w-25" style={{borderRadius:"2rem",marginRight:"2rem",width:"150px"}} onClick={handleContectUS}>Download</button>
+                <button className="btn btn-primary w-25 mt-2" style={{borderRadius:"2rem",marginLeft:"12rem",width:"150px"}} onClick={handleContectUS}>Share</button>
            
                     </div>
                     </div>
