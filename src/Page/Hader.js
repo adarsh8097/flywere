@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import './Hader.css';
 import { BsAirplaneFill } from "react-icons/bs";
 import { TbArrowsExchange } from "react-icons/tb";
@@ -20,21 +20,20 @@ import { MdLocalAirport } from "react-icons/md";
     const navigate = useNavigate();
     const[isModalOpen,setIsModalOpen] = useState(false);
     const[isModalOpenTo, setIsModalOpenTo] = useState(false);
-    // const [fromAirpots , setFormAirpots] = useState("")
-    // const [fromAirport, setFromAirport] = useState("");
     const[fromAirportName,setFormAirpotsName] = useState("");
-    // const [fromAirportTo, setFromAirportTo] = useState("");
     const[fromAirportNameTo,setFormAirpotsNameTo] = useState("");
      const{fromAirport , fromAirportTo,setFromAirport,setFromAirportTo} = UseAirPot();
-    
+     const[isdate , setDate]  = useState("");
+     const [isFocused , setISFocused] = useState(false);
+
     let handleTicket =[
+        // {
+        //     id :"1",
+        //     title:"Depart",
+        //     date: "4 Octubar 2023",
+        //     daye:"Sunday"
+        // }
         {
-            id :"1",
-            title:"Depart",
-            date: "4 Octubar 2023",
-            daye:"Sunday"
-        }
-        ,{
             id :"2",
             title:"Arive",
             date: "5 Octubar",
@@ -80,6 +79,31 @@ import { MdLocalAirport } from "react-icons/md";
         toast.info("coming soon!");
  
       }
+
+      let handleDate =(e)=>{
+          setDate(e.target.value);
+          e.target.value = "";
+      }
+   
+    //   const formatDate = (dateString) => {
+    //     if (!dateString) return "";
+    //     const date = new Date(dateString);
+    //     return date.toLocaleDateString("en-US", {
+    //       day: "numeric",
+    //       month: "long",
+    //       year: "numeric",
+    //     });
+    //   };
+    
+    const formatDate = (dateString) => {
+        if (!dateString) return "";
+        const date = new Date(dateString);
+        const day = date.getDate();
+        const month = date.toLocaleString("en-US", { month: "long" });
+        const year = date.getFullYear();
+        return `${day} ${month} ${year}`;
+      };
+      
      return (
        <>
        <div className='nav-bar'>
@@ -87,7 +111,7 @@ import { MdLocalAirport } from "react-icons/md";
              <div className='demonav'>
              <BsAirplaneFill style={{marginTop:"8px",fontSize:"25px"}}/>
              <h3>Flywere</h3>
-             </div>
+             </div> 
          
            <ul style={{cursor:'pointer'}}>
                 <li onClick={handleContectUS}>Service</li>
@@ -184,6 +208,16 @@ import { MdLocalAirport } from "react-icons/md";
             </div>
             &nbsp;
             <div className="d-flex deatilscard">
+            <div key="index" className='cardItem'>
+                            <p className="title-ticket">
+                             <input type={isFocused ? "date":"text"}
+                              onFocus={()=> setISFocused(true)}
+                              onBlur={()=> setISFocused(false)}
+                              placeholder={isFocused ? "":"Depart"}
+                             onChange={handleDate} style={{border :"none" ,paddingLeft:"2px"}}/></p>
+                            <h6>{isdate ? formatDate(isdate) : "4 Octubar 2023"}</h6>
+                            <p className="title-ticket">Sunday</p>
+                        </div>
                 {handleTicket.map((d, index) => (
                     <div className="cardItem" key={index}>
                         <div key="index">
